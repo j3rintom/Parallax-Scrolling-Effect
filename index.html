@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>  
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="./bird1.png" id ='bird-1' alt="bird-1">
+        <img src="./bird2.png" id ='bird-2' alt="bird-2">
+        <img src="./forest.png" id ='forest' alt="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="./rocks.png" id="rocks" alt="rocks">
+        <img src="./water.png" id="water" alt="water">
+    </section>
+    <div class="sec">
+        <h2>Parrallax Scrolling Effects</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt dolor, dolorem aperiam facere totam doloremque commodi? Qui alias iure aliquam maiores dolorem, sequi totam quam tempora eum pariatur? Odio, dolorem.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam facere aliquam cumque quisquam maxime animi odio facilis nihil repellendus aliquid deleniti, repudiandae magni velit incidunt et exercitationem deserunt voluptatem a.
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ab doloremque culpa quo eius earum, dolor, eaque pariatur repellat ipsam possimus. At tenetur laborum necessitatibus quo iure, nisi ex labore?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolor a omnis cupiditate hic incidunt quasi nulla. Voluptatum dicta voluptas reprehenderit distinctio deleniti modi ipsum aliquam, quo saepe, quae voluptatibus. <br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, beatae consequuntur tenetur voluptates repellendus fugit labore consequatur cum in accusantium quae harum praesentium at id molestiae cupiditate aliquid necessitatibus deserunt?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum nesciunt officiis repellat voluptate harum incidunt ex nihil est cumque sapiente, culpa nulla, repudiandae sequi eius? Soluta fuga voluptas laudantium sint. <br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dolor totam! Maiores aperiam minus optio. Aspernatur, facilis. Temporibus soluta fuga dolore debitis totam quia ratione distinctio quidem. Aliquam, qui consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aperiam, distinctio officia neque quam deleniti error quos magni hic temporibus ab, optio unde, quod omnis molestiae quibusdam debitis? Dolorum, nam.
+        </p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird-1');
+        let bird2 = document.getElementById('bird-2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            text.style.top =50 + value* -0.5 +'%';
+            bird1.style.top= value* -1.5 +'px';
+            bird1.style.left= value* 2 +'px';
+            bird2.style.top= value* -1.5 +'px';
+            bird2.style.left= value* -5 +'px';
+            btn.style.marginTop=value* 1.5 + 'px';
+            rocks.style.top= value* -0.12 +'px';
+            forest.style.top= value* 0.25 +'px';
+            header.style.top= value* -0.5 +'px';
+        });
+    </script>
+</body>
+</html>
